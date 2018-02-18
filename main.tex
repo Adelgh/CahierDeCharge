@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper,oneside]{report}
+%\documentclass[11pt,oneside%,printercorrection%
+%]{report}
+\usepackage[english,frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[titletoc,toc,title]{appendix}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx} %for graphics
+\usepackage{float} %mainly to force figures [H]ere option
+\usepackage[top=3cm, bottom=3cm]{geometry}
+\widowpenalty=10000
+\clubpenalty=10000
+\hyphenpenalty=5000
+\tolerance=1000
+
+\usepackage{fancyhdr} % header and footer customizing
+\usepackage{hyperref} % for pdf links
+\usepackage{wrapfig}
+\usepackage{multirow}
+\newcommand{\HRule}{\textcolor{lightgray}{\rule{15.5 cm}{0.12 cm}}}
+\newcommand{\Hrule}{\textcolor{lightgray}{\rule{13.5 cm}{0.15 cm}}}
+
+\AddThinSpaceBeforeFootnotes % à insérer si on utilise \usepackage[french]{babel}
+\FrenchFootnotes % à insérer si on utilise \usepackage[french]{babel}
+
+
+\usepackage{lettrine}
+\makeatletter
+\newcommand{\emptypage}[1]{%
+  \cleardoublepage
+  \begingroup
+  \let\ps@plain\ps@empty
+  \pagestyle{empty}
+  
+  \cleardoublepage}
+\makeatletter
+\setcounter{secnumdepth}{3}
+
+\begin{document} 
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{Ministère de l'Enseignement Supérieur de la Recherche \\Scientifique et de la Technologie}\\
+\vspace*{1mm}
+\textbf{Université de la Manouba}\\
+\vspace*{1mm}
+\textbf{Ecole Nationale des Sciences de l'Informatique}\\
+\end{center}
+
+\vspace*{1mm}
+
+%\begin{flushleft}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{images/cover/logoEnsi.png}
+\end{figure}
+%\end{flushleft}
+
+
+%\begin{flushright}
+%\begin{minipage}[r]{3\textwidth}
+%% \includegraphics[height=1cm, width=2cm]{./images/garde/grift.png}
+%\end{minipage}
+%\end{flushright}
+
+\vspace*{1mm}
+
+\begin{center}
+%%\textbf{\LARGE{RAPPORT}}\\
+\textbf{Cahier des Charges de\\ Mémoire de Fin d'Études }\\
+
+
+\vspace*{1mm}
+\begin{center}
+{\large{Présenté en vue de l'obtention du titre\\
+D’INGENIEUR EN INFORMATIQUE}}
+\end{center}
+
+\begin{center}
+{Par}
+\end{center}
+\begin{center}
+\textbf{{{  Ramzi Ben yahia }}}
+
+\end{center}
+
+
+\begin{center}
+{Sujet:}
+\end{center}
+
+\textbf{\Large {Création d’un système de profiling des utilisateurs d’un site web financier }}
+\end{center}
+\vspace*{2mm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=5cm]{images/cover/logo.jpg}
+\end{figure}
+
+{{\fontfamily{cmr}\selectfont   Organisme :}}
+ {\textbf{Minotore}} 
+ 
+ {{\fontfamily{cmr}\selectfont  Nom du responsable :}}
+ {\textbf{ Hichem Elloumi }} 
+ 
+ {{\fontfamily{cmr}\selectfont  Encadré par :}}
+ {\textbf{ Mohamed Chettaoui }} 
+ 
+{{\fontfamily{cmr}\selectfont   Adresse :}}
+ {\textbf{ Rue du lac malaren, Immeuble Palais du Golf, 4 ème etage,}}
+ 
+ {\textbf{  C7, Les berges du LAC 1}} 
+
+{{\fontfamily{cmr}\selectfont   Téléphone :}}
+ {\textbf{ (+216) 36 365 116} }
+ 
+\begin{flushright}
+Signature \& Cachet de l'Organisme
+\end{flushright}
+
+\textbf{}
+\textbf{}
+\textbf{}
+\newline
+\newline
+
+\begin{center}
+Année Universitaire 2017-2018
+\end{center} 
+
+\pagenumbering{roman} \setcounter{page}{1}
+
+
+ \tableofcontents
+\listoffigures
+ \cleardoublepage 
+\newpage
+ \setcounter{page}{1}
+\pagestyle{fancy}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand\headrulewidth{1pt}
+
+\fancyhead[R]{}
+
+\fancyhead[L]{\leftmark}
+\pagestyle{fancy}
+\renewcommand\headrulewidth{1pt}
+\fancyhead[L]{\leftmark}
+\renewcommand\footrulewidth{1pt}
+\fancyfoot[R]{Page {\thepage}}
+\fancyfoot[C]{\textbf{Cahier de charges}}
+\fancyfoot[L]{2017-2018}%\leftmark
+\pagenumbering{arabic}
+
+\input{chap1.tex}
+
+\clearpage
+\end{document}
